@@ -94,16 +94,17 @@
 %x=1.5cm,y=0.15mm, yscale=-1]
 
 
-\draw [help lines, xstep=\directlua{tex.print(mymodule.get_grid_step())}, ystep=\directlua{tex.print(mymodule.get_grid_step())}]
-(\directlua{tex.print(mymodule.get_beg_reg_val())}, \directlua{tex.print(mymodule.get_beg_ah())})
-grid
-(\directlua{tex.print(mymodule.get_end_reg_val())}, \directlua{tex.print(mymodule.get_end_ah())} + 1);
+%\draw [help lines, xstep=\directlua{tex.print(mymodule.get_grid_step())}, ystep=\directlua{tex.print(mymodule.get_grid_step())}]
+%(\directlua{tex.print(mymodule.get_beg_reg_val())}, \directlua{tex.print(mymodule.get_beg_ah())})
+%grid
+%(\directlua{tex.print(mymodule.get_end_reg_val())}, \directlua{tex.print(mymodule.get_end_ah())} + 1);
 
 
 % Axis
 %\draw [->, very thick] (\beglong,0) -- (\endlong+0.2,0);
 %\draw [->, very thick] (0,\begah) -- (0,\endah+20);
-\draw [] (\beglong,0) -- (\endlong,0);
+\draw []
+(\directlua{tex.print(mymodule.get_beg_reg_val())}, 0) -- (\directlua{tex.print(mymodule.get_end_reg_val())}, 0);
 
 % Axis ticks
 \foreach \y in {100,200,...,\endah} {
@@ -130,6 +131,7 @@ grid
 
 
 \directlua{mymodule.plot_grammarians(os.getenv("USE_LANG"))}
+\directlua{mymodule.plot_axes()}
 
 \end{tikzpicture}
 \end{document}
