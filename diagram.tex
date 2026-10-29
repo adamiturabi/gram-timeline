@@ -125,7 +125,7 @@
 
 
 \directlua{mymodule = require("mymodule")}
-\directlua{mymodule.plot_grammarians()}
+\directlua{mymodule.plot_grammarians(os.getenv("USE_LANG"))}
 
 \end{tikzpicture}
 \end{document}
