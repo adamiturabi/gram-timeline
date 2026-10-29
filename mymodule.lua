@@ -5,24 +5,16 @@ local csvutils = require("csvutils")
 local grid_step_val = 1.5
 local grid_step_unit = 'cm'
 local y_grid_step_scale = 100.0
-function M.get_pic_x()
+function M.get_grid_step()
   return tostring(grid_step_val) .. grid_step_unit
 end
+function M.get_pic_x()
+  return M.get_grid_step()
+  end
 function M.get_pic_y()
   return tostring(grid_step_val / y_grid_step_scale) .. grid_step_unit
 end
-function ce2ah(ce)
-  return (ce - 622 + 1) * 365.25 / (29.5 * 12)
-end
 
-function get_name(v, use_lang)
-  if use_lang == 'ar' then
-    return '\\foreignlanguage{arabic}{' .. v.name_ar .. '}'
-  else
-    assert(use_lang == 'en')
-    return v.name_en
-  end
-end
 
 local regions = {
   ["and"] = 0.5, -- Andalus
@@ -35,6 +27,37 @@ local regions = {
   ["bsr"] = 5.25,-- Basrah
   ["kwf"] = 5.25,-- Kufah
 }
+
+function ce2ah(ce)
+  return (ce - 622 + 1) * 365.25 / (29.5 * 12)
+end
+function M.get_beg_ah()
+  return 0
+end
+function M.get_end_ah()
+  return 1000
+end
+function M.get_beg_reg_val()
+  return 0
+end
+function M.get_end_reg_val()
+  max_reg_val = M.get_beg_reg_val()
+  for k, v in pairs(regions) do
+    if v > max_reg_val then
+      max_reg_val = v
+    end
+  end
+  return math.ceil(max_reg_val)
+end
+
+function get_name(v, use_lang)
+  if use_lang == 'ar' then
+    return '\\foreignlanguage{arabic}{' .. v.name_ar .. '}'
+  else
+    assert(use_lang == 'en')
+    return v.name_en
+  end
+end
 
 function get_region_parts(region_code)
   local region_parts = csvutils.split(region_code, "%+")

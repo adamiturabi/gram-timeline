@@ -94,7 +94,11 @@
 %x=1.5cm,y=0.15mm, yscale=-1]
 
 
-\draw [help lines,xstep=1.5cm, ystep=1.5cm] (\beglong,\begah) grid (\endlong,\endah+1);
+\draw [help lines, xstep=\directlua{tex.print(mymodule.get_grid_step())}, ystep=\directlua{tex.print(mymodule.get_grid_step())}]
+(\directlua{tex.print(mymodule.get_beg_reg_val())}, \directlua{tex.print(mymodule.get_beg_ah())})
+grid
+(\directlua{tex.print(mymodule.get_end_reg_val())}, \directlua{tex.print(mymodule.get_end_ah())} + 1);
+
 
 % Axis
 %\draw [->, very thick] (\beglong,0) -- (\endlong+0.2,0);
