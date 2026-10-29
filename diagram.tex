@@ -89,7 +89,8 @@
 }
 
 \begin{document}
-\begin{tikzpicture}[x=1.5cm,y=0.15mm, yscale=-1]
+\directlua{mymodule = require("mymodule")}
+\begin{tikzpicture}[x=\directlua{tex.print(mymodule.get_pic_x())}, y=\directlua{tex.print(mymodule.get_pic_y())}, yscale=-1]
 %x=1.5cm,y=0.15mm, yscale=-1]
 
 
@@ -124,7 +125,6 @@
 %\node[align=center,anchor=west] at (5.2, -85) {\small Iraq};
 
 
-\directlua{mymodule = require("mymodule")}
 \directlua{mymodule.plot_grammarians(os.getenv("USE_LANG"))}
 
 \end{tikzpicture}
