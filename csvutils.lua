@@ -1,5 +1,8 @@
+
+local M = {}
+
 -- Helper function to split a string by a delimiter
-local function split(str, sep)
+function M.split(str, sep)
     local t = {}
     local pattern = string.format("([^%s]+)", sep)
     str:gsub(pattern, function(match)
@@ -8,8 +11,9 @@ local function split(str, sep)
     return t
 end
 
+
 -- Function to parse CSV with a comment header line
-function parseCommentHeaderCSV(filepath)
+function M.parseCommentHeaderCSV(filepath)
     local file = io.open(filepath, "r")
     if not file then
         error("Could not open file: " .. filepath)
@@ -24,10 +28,10 @@ function parseCommentHeaderCSV(filepath)
             if not fields then
                 -- Remove leading comment characters like '--', '#', or '//' and whitespace
                 local cleanHeader = line:gsub("^%s*[%-%#%/]+%s*", "")
-                fields = split(cleanHeader, ",")
+                fields = M.split(cleanHeader, ",")
                 table.remove(fields,1) -- first column is key
             else
-                local values = split(line, ",")
+                local values = M.split(line, ",")
                 local key = values[1]
                 table.remove(values,1)
                 local row = {}
@@ -46,14 +50,15 @@ function parseCommentHeaderCSV(filepath)
     return dict
 end
 
+return M
 -- Example Usage:
 -- Assuming 'data.csv' has:
 -- --id,name,score
 -- 1,Alice,95
 -- 2,Bob,88
 
-local data = parseCommentHeaderCSV("grammarians.csv")
-for key, row in pairs(data) do
-    print(key, row.name_en, row.name_ar)
-end
+--local data = parseCommentHeaderCSV("grammarians.csv")
+--for key, row in pairs(data) do
+--    print(key, row.name_en, row.name_ar)
+--end
 

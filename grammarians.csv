@@ -1,40 +1,40 @@
 #grammarian_code,region_code,yod,align,anchor,xshift,yshift,name_ar,name_en,school
-asw,reg_bsr,69,above,south,-7,-20,[أبو الأسود الدؤلي],[Abu l‑Aswad al‑Duʾalī],b
-abd,reg_bsr,117,above,south,-7,-21,[عبد الله بن أبي إساحق],[Ɛabd Allāh ibn Abī Is·ḥāq],b
-emr,reg_bsr,154,above,south,9,-24,[أبو عمرو بن العلاء],[Abū Ɛamr ibn al-Ɛalāʾ],b
-xll,reg_bsr,170,right,west,-20,4,الخليل,al-K͡halīl,b
-sbw,reg_bsr,180,right,west,-20,-4,سيبويه,Sībawayh,b
-xfc,reg_bsr,215,below,north,30,25,الأخفش الأوسط,al-Ak͡hfas͡h al-Awsaṭ,b
-ras,reg_ksr,187,left,east,16,8,[أبو جعفر الرؤاسي],[Abū Jaɛfar al‑Ruʾāsī],k
-ksa,reg_bgd,189,left,east,16,-4,الكسائي,al-Kisāʾī,k
-fra,reg_bgd,207,left,east,16,-6,الفراء,al-Farrāʾ,k
-rdy,reg_ksr,684,below,north,-13,19,الرضي الأستراباذي,al-Rad̤͡hiyy al-Astarābād͡hī,
-brd,reg_bgd,285,left,east,16,-1,المبرد,al-Mubarrad,b
-vlb,reg_bgd,291,left,east,16,-6,ثعلب,T͡haɛlab,k
-srj,reg_bgd,316,left,east,16,-5,ابن السراج,Ibn al-Sarrāj,
-zjj,reg_bgd,337,left,east,16,-6,الزجاجي,al-Zajjājī,
-srf,reg_bgd,368,left,east,16,-3,السيرافي,al-Sīrāfī,b
-ely,reg_bgd,377,left,east,16,-7,أبو علي الفارسي,Abū Ɛaliyy al-Fārisī,
-rmn,reg_bgd,384,left,east,16,-12,الرماني,al-Rummānī,
-jny,reg_bgd,392,left,east,16,-16,ابن جني,Ibn Jinnī,
-nbr,reg_bgd,577,right,west,-16,-1,أبو البركات الأنصاري,Abu l-Barakāt al-Anbārī,
-eyc,reg_shm,643,right,west,-16,3,ابن يعيش,Ibn Yaɛīs͡h,
-mlk,reg_shm,672,right,west,-16,3,ابن مالك,Ibn Mālik,
-hjb,reg_msr,646,above,south,-10,-8,ابن الحاجب,Ibn al-Ḥājib,
-hyn,reg_msr,745,right,west,-16,-4,أبو حيان,Abū Ḥayyān,
-hcm,reg_msr,761,right,west,-16,-7,ابن هشام الأنصاري,Ibn His͡hām al-Anṣārī,
-eql,reg_msr,769,right,west,-16,-13,ابن عقيل,Ibn Ɛaqīl,
-cmn,reg_msr,900,right,west,-16,5,الأشموني,al-Us͡hmūnī,
-xld,reg_msr,905,right,west,-16,-2,خالد الأزهري,K͡hālid al-Azharī,
-syt,reg_msr,911,right,west,-16,-9,السيوطي,al-Suyūṭī,
-jrj,reg_frs,471,left,east,16,0,الجرجاني,al-Jurjānī,
-zmx,reg_fsr+0.5,538,left,east,16,-6,الزمخشري,al-Zamak͡hs͡harī,
-frs,reg_frs,395,left,east,20,-12,ابن فارس,Ibn Fāris,
-mda,reg_and,592,left,east,20,-9,ابن مضاء,Ibn Mad̤͡hāʾ,
-ctb,reg_and,790,below,north,-13,22,أبو إسحاق الشاطبي,Abū Is·ḥāq al-S͡hāṭibī,
-clb,reg_and,645,left,east,24,-3,الشلوبين,al-S͡halawbīn,
-ajr,reg_afr,723,left,east,10,-5,ابن آجروم,Ibn Ājurrūm,
-esf,reg_afr,669,right,west,-16,-3,ابن عصفور,Ibn Ɛuṣfūr,
+asw,bsr,69,above,south,-7,-20,[أبو الأسود الدؤلي],[Abu l‑Aswad al‑Duʾalī],b
+abd,bsr,117,above,south,-7,-21,[عبد الله بن أبي إساحق],[Ɛabd Allāh ibn Abī Is·ḥāq],b
+emr,bsr,154,above,south,9,-24,[أبو عمرو بن العلاء],[Abū Ɛamr ibn al-Ɛalāʾ],b
+xll,bsr,170,right,west,-20,4,الخليل,al-K͡halīl,b
+sbw,bsr,180,right,west,-20,-4,سيبويه,Sībawayh,b
+xfc,bsr,215,below,north,30,25,الأخفش الأوسط,al-Ak͡hfas͡h al-Awsaṭ,b
+ras,kwf,187,left,east,16,8,[أبو جعفر الرؤاسي],[Abū Jaɛfar al‑Ruʾāsī],k
+ksa,erq,189,left,east,16,-4,الكسائي,al-Kisāʾī,k
+fra,erq,207,left,east,16,-6,الفراء,al-Farrāʾ,k
+rdy,kwf,684,below,north,-13,19,الرضي الأستراباذي,al-Rad̤͡hiyy al-Astarābād͡hī,
+brd,erq,285,left,east,16,-1,المبرد,al-Mubarrad,b
+vlb,erq,291,left,east,16,-6,ثعلب,T͡haɛlab,k
+srj,erq,316,left,east,16,-5,ابن السراج,Ibn al-Sarrāj,
+zjj,erq,337,left,east,16,-6,الزجاجي,al-Zajjājī,
+srf,erq,368,left,east,16,-3,السيرافي,al-Sīrāfī,b
+ely,erq,377,left,east,16,-7,أبو علي الفارسي,Abū Ɛaliyy al-Fārisī,
+rmn,erq,384,left,east,16,-12,الرماني,al-Rummānī,
+jny,erq,392,left,east,16,-16,ابن جني,Ibn Jinnī,
+nbr,erq,577,right,west,-16,-1,أبو البركات الأنصاري,Abu l-Barakāt al-Anbārī,
+eyc,shm,643,right,west,-16,3,ابن يعيش,Ibn Yaɛīs͡h,
+mlk,shm,672,right,west,-16,3,ابن مالك,Ibn Mālik,
+hjb,msr,646,above,south,-10,-8,ابن الحاجب,Ibn al-Ḥājib,
+hyn,msr,745,right,west,-16,-4,أبو حيان,Abū Ḥayyān,
+hcm,msr,761,right,west,-16,-7,ابن هشام الأنصاري,Ibn His͡hām al-Anṣārī,
+eql,msr,769,right,west,-16,-13,ابن عقيل,Ibn Ɛaqīl,
+cmn,msr,900,right,west,-16,5,الأشموني,al-Us͡hmūnī,
+xld,msr,905,right,west,-16,-2,خالد الأزهري,K͡hālid al-Azharī,
+syt,msr,911,right,west,-16,-9,السيوطي,al-Suyūṭī,
+jrj,frs,471,left,east,16,0,الجرجاني,al-Jurjānī,
+zmx,frs+0.5,538,left,east,16,-6,الزمخشري,al-Zamak͡hs͡harī,
+frs,frs,395,left,east,20,-12,ابن فارس,Ibn Fāris,
+mda,and,592,left,east,20,-9,ابن مضاء,Ibn Mad̤͡hāʾ,
+ctb,and,790,below,north,-13,22,أبو إسحاق الشاطبي,Abū Is·ḥāq al-S͡hāṭibī,
+clb,and,645,left,east,24,-3,الشلوبين,al-S͡halawbīn,
+ajr,afr,723,left,east,10,-5,ابن آجروم,Ibn Ājurrūm,
+esf,afr,669,right,west,-16,-3,ابن عصفور,Ibn Ɛuṣfūr,
 
 
 
