@@ -150,10 +150,6 @@ function  M.plot_axes(use_lang)
   tex.print(string.format("\\node[rotate=90, align=left, anchor=west] () at (%.2f, -15) {\\scriptsize %s};",
     baghdad.x, "←" .. get_name(baghdad, use_lang)
   ))
---\node[rotate=90,align=left,anchor=west] at (5.2, -15) {\scriptsize ←al-Kūfah};
---\node[rotate=90,align=left,anchor=west] at (5.5, -15) {\scriptsize ←Bag͡hdād};
---\node[rotate=90,align=left,anchor=west] at (5.8, -15) {\scriptsize ←al-Baṣrah};
---%\node[align=center,anchor=west] at (5.2, -85) {\small Iraq};
 
 end
 
