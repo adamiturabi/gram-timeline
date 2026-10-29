@@ -79,7 +79,6 @@ function get_region_parts(region_code)
 end
  
 function M.plot_grammarians(use_lang)
-
   local grammarians = csvutils.parseCommentHeaderCSV("grammarians.csv")
  
   for k, v in pairs(grammarians) do
@@ -93,8 +92,27 @@ function M.plot_grammarians(use_lang)
     tex.print(string.format("\\node (labelnode)  [inner sep=0, outer sep=0, %s of=pointnode, xshift=%.2f, yshift=%.2f,anchor=%s] {\\footnotesize %s};", v.align, v.xshift, v.yshift, v.anchor, get_name(v, use_lang)))
     tex.print(string.format("\\draw (pointnode)  -- (labelnode.%s);", v.anchor))
   end
-
 end
+
+function M.plot_dynasties(use_lang)
+  local dynasties = csvutils.parseCommentHeaderCSV("dynasties.csv")
+ 
+  for k, v in pairs(dynasties) do
+    x_label = v.reg_beg - 1 + (v.reg_end - v.reg_end + 1)/2
+    y_label = v.ce_beg - 1 + (v.ce_end - v.ce_end + 1)/2
+    shifts = ""
+    if v.shifts ~= nil then
+      shifts = v.shifts:gsub("%|", ",")
+    end
+    tex.print("\\begin{pgfonlayer}{background}")
+    tex.print(string.format("\\fill [pattern=%s,pattern color=black!10!white]", v.pattern))
+    tex.print(string.format("(%.2f,%.2f) rectangle (%.2f,%.2f);", v.reg_beg-1, ce2ah(v.ce_beg), v.reg_end, ce2ah(v.ce_end)))
+    tex.print(string.format("\\node [black!35, %s, font=\\bfseries\\sffamily] at (%.2f, %.2f) {%s};",
+      shifts, x_label, y_label, get_name(v, use_lang)))
+    tex.print("\\end{pgfonlayer}")
+  end
+end
+
 
 function  M.plot_axes(use_lang)
   tex.print(string.format("\\draw [help lines, xstep=%s, ystep=%s] (%.2f, %.2f) grid (%.2f, %.2f + 1);",
