@@ -2,6 +2,8 @@
 
 Inspired by and built upon Andreas Hallberg's work: <https://andreasmhallberg.github.io/timeline-of-arab-grammarians/>
 
+SVG and PDF versions are available.
+
 ![Timeline of Arabic grammarians (English color version)](timeline_en_color.svg)
 
 ![Timeline of Arabic grammarians (Arabic color version)](timeline_ar_color.svg)

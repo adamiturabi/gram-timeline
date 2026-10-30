@@ -1,6 +1,6 @@
 key,color,pattern,reg_beg,reg_end,ce_beg,ce_end,name_size,name_en,name_ar,shifts
 nby,E9E2D0,bricks,hjz-0.5,hjz+0.5,622,633,,,,
-rcd,E9E2D0,bricks,afr,frs,633,663,1,RASHIDUN,الراشدون,xshift=30pt|yshift=5pt
+rcd,E9E2D0,bricks,afr,frs,633,663,1,RASHIDUN,الراشدون,xshift=17|yshift=0pt
 umw_main,D7C7B8,vertical lines,afr-0.5,frs+0.5,663,750,1,UMAYYADS,بنو أمية,xshift=-20|yshift=-3pt
 umy_and,D7C7B8,vertical lines,and-0.5,and+0.5,711,1031,,UMAYYADS,بنو أمية,rotate=90
 ebs_1,C7D7D4,crosshatch,msr-0.5,frs+0.5,750,945,1,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
