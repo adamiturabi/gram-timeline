@@ -30,6 +30,7 @@ function M.parseCommentHeaderCSV(filepath)
 
     local fields = nil
     local dict = {}
+    local insertion_order = {}
 
     for line in file:lines() do
         -- Skip empty lines
@@ -51,16 +52,19 @@ function M.parseCommentHeaderCSV(filepath)
                       value = ""
                     end
                     row[fields[i]] = value
-                    print(fields[i], value)
                 end
                 dict[key] = row
+
+                -- Append to insertion order
+                table.insert(insertion_order, key)
+
                 --table.insert(rows, row)
             end
         end
     end
 
     file:close()
-    return dict
+    return dict, insertion_order
 end
 
 return M

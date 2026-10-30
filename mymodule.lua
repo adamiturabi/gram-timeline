@@ -79,7 +79,7 @@ function get_region_parts(region_code)
 end
  
 function M.plot_grammarians(use_lang)
-  local grammarians = csvutils.parseCommentHeaderCSV("grammarians.csv")
+  local grammarians, gram_order = csvutils.parseCommentHeaderCSV("grammarians.csv")
  
   for k, v in pairs(grammarians) do
     local base_region, add_val = get_region_parts(v.region_code)
@@ -95,10 +95,11 @@ function M.plot_grammarians(use_lang)
 end
 
 function M.plot_dynasties(use_lang)
-  local dynasties = csvutils.parseCommentHeaderCSV("dynasties.csv")
+  local dynasties, dyn_order = csvutils.parseCommentHeaderCSV("dynasties.csv")
  
-  for k, v in pairs(dynasties) do
-    print(v.name_en)
+  for index, k in ipairs(dyn_order) do
+    v = dynasties[k]
+  --for k, v in pairs(dynasties) do
     local reg_beg, add_val = get_region_parts(v.reg_beg)
     reg_beg = regions[reg_beg].x + add_val
     local reg_end, add_val = get_region_parts(v.reg_end)
