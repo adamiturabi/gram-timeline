@@ -3,7 +3,7 @@ nby,E9E2D0,bricks,hjz-0.5,hjz+0.5,622,633,,,,
 rcd,E9E2D0,bricks,afr,frs,633,663,1,RASHIDUN,الراشدون,xshift=17|yshift=0pt
 umw_main,D7C7B8,vertical lines,afr-0.5,frs+0.5,663,750,1,UMAYYADS,بنو أمية,xshift=-20|yshift=-3pt
 umy_and,D7C7B8,vertical lines,and-0.5,and+0.5,711,1031,,UMAYYADS,بنو أمية,rotate=90
-ebs_1,C7D7D4,crosshatch,msr-0.5,frs+0.5,750,945,1,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
+ebs_1,C7D7D4,crosshatch,msr-0.5,frs+0.5,750,945,2,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
 ebs_2,C7D7D4,crosshatch,afr-0.5,afr+0.5,750,909,,,,
 ebs_3,C7D7D4,crosshatch,msr-0.5,hjz+0.5,945,969,,,,
 ebs_4,C7D7D4,crosshatch,erq-0.1,erq+0.1,945,1194,,,,
@@ -29,7 +29,7 @@ mgl,C9D2D6,checkerboard,erq-0.5,frs+0.5,1258,1335,,MONGOLS,المغول,
 mlk,FFD6C9,horizontal lines,msr-0.5,hjz+0.5,1250,1517,1,MAMLUKS,المماليك,xshift=-32pt|yshift=32pt
 whd,E6E2F7,crosshatch dots,and,afr,1140,1269,-1,ALMOHADS,الموحدون,rotate=60
 rbt,BE9FBF,crosshatch dots,and,afr,1056,1140,-1,ALMORAVIDS,المرابطون,rotate=60
-mrn,aaa7cc,crosshatch dots,afr-0.5,afr+0.5,1217,1465,-1,MARINIDS,بنو مرين,rotate=90|xshift=-15pt
+mrn,aaa7cc,crosshatch dots,afr-0.5,afr+0.5,1217,1465,,MARINIDS,بنو مرين,rotate=90|xshift=-15pt
 nsr,BFD4FF,crosshatch dots,and,and+0.5,1269,1492,-1,NASRIDS,بنو نصر,rotate=90
 jlr,F2E9E4,dots,erq-0.5,erq+0.5,1335,1400,-2,JALAYRIDS,الجلائر,
 zfr,F2E9E4,dots,frs-0.5,frs+0.5,1335,1400,-2,MUZAFFARIDS,آل مظفر,xshift=5pt
