@@ -1,6 +1,6 @@
 key,pattern,reg_beg,reg_end,ce_beg,ce_end,name_size,name_en,name_ar,shifts
 nby,bricks,hjz-0.5,hjz+0.5,622,633,,,,
-rcd,bricks,afr,frs,633,663,\large,RASHIDUN,الراشدون,xshift=38pt
+rcd,bricks,afr,frs,633,663,\large,RASHIDUN,الراشدون,xshift=30pt|yshift=5pt
 umw_main,vertical lines,afr-0.5,frs+0.5,663,749,\large,UMAYYADS,بنو أمية,xshift=-20|yshift=-3pt
 umy_and,vertical lines,and-0.5,and+0.5,711,1031,,UMAYYADS,بنو أمية,rotate=90
 ebs_1,crosshatch,msr-0.5,frs+0.5,750,945,\large,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
@@ -23,7 +23,7 @@ ebs_4,crosshatch,erq-0.5,erq+0.5,1194,1258,\small,ABBASIDS,بنو العباس,
 znk_1,grid,shm-0.5,hjz+0.5,1154,1175,\small,ZENGIDS,الزنكيون,
 znk_2,grid,msr-0.5,msr+0.5,1167,1175,,,,
 xrz,dots,frs-0.5,frs+0.5,1194,1258,\small,KHWARAZM,الخوارزميون,xshift=9pt
-bwh,fivepointed stars,erq-0.5,frs+0.5,945,1055,,BUYIDS,بنو بويه,xshift=10pt
+bwh,fivepointed stars,erq-0.5,frs+0.5,945,1055,,BUYIDS,بنو بويه,xshift=10pt|yshift=5pt
 mgl,checkerboard,erq-0.5,frs+0.5,1258,1335,,MONGOLS,المغول,
 mlk,horizontal lines,msr-0.5,hjz+0.5,1250,1517,\large,MAMLUKS,المماليك,xshift=-32pt|yshift=32pt
 rbt,crosshatch dots,and,afr,1056,1140,\small,ALMORAVIDS,المرابطون,rotate=60
