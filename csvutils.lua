@@ -2,14 +2,23 @@
 local M = {}
 
 -- Helper function to split a string by a delimiter
-function M.split(str, sep)
+--function M.split(str, sep)
+--    local t = {}
+--    local pattern = string.format("([^%s]+)", sep)
+--    str:gsub(pattern, function(match)
+--        table.insert(t, match:match("^%s*(.-)%s*$")) -- trim whitespace
+--    end)
+--    return t
+--end
+function M.split(inputstr, sep)
+    sep = sep or "%s" -- Defaults to whitespace if no separator is given
     local t = {}
-    local pattern = string.format("([^%s]+)", sep)
-    str:gsub(pattern, function(match)
-        table.insert(t, match:match("^%s*(.-)%s*$")) -- trim whitespace
-    end)
+    for str in string.gmatch(inputstr, "([^" .. sep .. "]*)") do
+        table.insert(t, str)
+    end
     return t
 end
+
 
 
 -- Function to parse CSV with a comment header line
@@ -37,8 +46,12 @@ function M.parseCommentHeaderCSV(filepath)
                 local row = {}
                 --for field, value in pairs(fields, values) do
                 for i = 1, #values do
-                    row[fields[i]] = values[i]
-                    --print(field, value)
+                    value = values[i]
+                    if value == nil then
+                      value = ""
+                    end
+                    row[fields[i]] = value
+                    print(fields[i], value)
                 end
                 dict[key] = row
                 --table.insert(rows, row)
