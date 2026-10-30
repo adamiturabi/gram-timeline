@@ -117,7 +117,24 @@ function get_font_size(size_str, use_lang)
   end
   return dict[size_int]
 end
-function plot_dynasties(use_lang)
+--Colors
+--E9E2D0 D7C7B8 C7D7D4 B9C7D6
+--FFF9F0 F2E6D5 D9CBB8 CFE0D2 B8CBBE
+--E6EBF1 D7DEE8 C7D0DB
+--C7DADD E6E2F7 F2E9E4
+--FBE7B8 E7D3A2 D6E7F7 E5F0E8
+--E7E2D7 D6CFC2 C9D2D6 B8C3C9
+--FFD6C9 FBEAF3
+function get_rgb(hex_color)
+  if hex_color == '0' then
+    return 255,255,255,0
+  end
+  red_hex   = string.sub(hex_color, 1, 2)
+  green_hex = string.sub(hex_color, 3, 4)
+  blue_hex  = string.sub(hex_color, 5, 6)
+  return tonumber(red_hex, 16), tonumber(green_hex, 16), tonumber(blue_hex, 16), 0.75
+end
+function plot_dynasties(use_lang, color)
   local dynasties, dyn_order = csvutils.parseCommentHeaderCSV("dynasties.csv")
  
   for index, k in ipairs(dyn_order) do
@@ -134,9 +151,13 @@ function plot_dynasties(use_lang)
     end
     name = get_font_size(v.name_size, use_lang) .. " " .. get_name(v, use_lang)
     tex.print("\\begin{pgfonlayer}{background}")
-    tex.print(string.format("\\fill [pattern=%s,pattern color=black!10!white]", v.pattern))
+    if color == true then
+      tex.print(string.format("\\fill [fill={rgb,255:red,%d;green,%d;blue,%d}, fill opacity=%.2f]", get_rgb(v.color)))
+    else
+      tex.print(string.format("\\fill [pattern=%s,pattern color=black!10!white]", v.pattern))
+    end
     tex.print(string.format("(%.2f,%.2f) rectangle (%.2f,%.2f);", reg_beg, ce2ah(v.ce_beg), reg_end, ce2ah(v.ce_end)))
-    tex.print(string.format("\\node [black!35, %s, font=\\bfseries\\sffamily] at (%.2f, %.2f) {%s};",
+    tex.print(string.format("\\node [black!45, %s, font=\\bfseries\\sffamily] at (%.2f, %.2f) {%s};",
       shifts, x_label, y_label, name))
     tex.print("\\end{pgfonlayer}")
   end
@@ -202,12 +223,17 @@ end
 
 local M = {}
 
-function M.draw(use_lang)
+function M.draw(use_lang, color)
+  if color == 'true' then
+    color = true
+  else
+    color = false
+  end
   tex.print(string.format("\\begin{tikzpicture}[x=%s, y=%s, yscale=-1]",
     get_pic_x(),
     get_pic_y()
   ))
-  plot_dynasties(use_lang)
+  plot_dynasties(use_lang, color)
   plot_axes(use_lang)
   plot_grammarians(use_lang)
 

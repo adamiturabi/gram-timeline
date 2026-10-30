@@ -32,7 +32,7 @@
 \begin{document}
 \directlua{diagram = require("diagram")}
 
-\directlua{diagram.draw(os.getenv("USE_LANG"))}
+\directlua{diagram.draw(os.getenv("USE_LANG"), os.getenv("USE_COLOR"))}
 
 \end{document}
 
