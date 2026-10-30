@@ -98,15 +98,20 @@ function M.plot_dynasties(use_lang)
   local dynasties = csvutils.parseCommentHeaderCSV("dynasties.csv")
  
   for k, v in pairs(dynasties) do
-    x_label = v.reg_beg - 1 + (v.reg_end - v.reg_end + 1)/2
-    y_label = v.ce_beg - 1 + (v.ce_end - v.ce_end + 1)/2
+    local reg_beg, add_val = get_region_parts(v.reg_beg)
+    print(reg_beg, add_val)
+    reg_beg = regions[reg_beg].x + add_val
+    local reg_end, add_val = get_region_parts(v.reg_end)
+    reg_end = regions[reg_end].x + add_val
+    x_label = reg_beg + (reg_end - reg_end)/2
+    y_label = v.ce_beg + (v.ce_end - v.ce_end)/2
     shifts = ""
     if v.shifts ~= nil then
       shifts = v.shifts:gsub("%|", ",")
     end
     tex.print("\\begin{pgfonlayer}{background}")
     tex.print(string.format("\\fill [pattern=%s,pattern color=black!10!white]", v.pattern))
-    tex.print(string.format("(%.2f,%.2f) rectangle (%.2f,%.2f);", v.reg_beg-1, ce2ah(v.ce_beg), v.reg_end, ce2ah(v.ce_end)))
+    tex.print(string.format("(%.2f,%.2f) rectangle (%.2f,%.2f);", reg_beg, ce2ah(v.ce_beg), reg_end, ce2ah(v.ce_end)))
     tex.print(string.format("\\node [black!35, %s, font=\\bfseries\\sffamily] at (%.2f, %.2f) {%s};",
       shifts, x_label, y_label, get_name(v, use_lang)))
     tex.print("\\end{pgfonlayer}")
