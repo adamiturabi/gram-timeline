@@ -220,6 +220,23 @@ function  plot_axes(use_lang)
   ))
 
 end
+function plot_phase(desc_en, desc_ar, beg_y, end_y, use_lang)
+  desc = desc_en
+  if use_lang == 'ar' then
+    desc = "\\foreignlanguage{arabic}{" .. desc_ar .. "}"
+  end
+  tex.print(string.format("\\draw [thin] (-0.8,%.2f+2) -- (-1,%.2f+2) -- (-1, %.2f-2) node [midway, above, rotate=90,align=center, font=\\sffamily] {\\footnotesize %s} -- (-0.8,%.2f-2);", beg_y, beg_y, end_y, desc, end_y))
+end
+function plot_phases(use_lang)
+    plot_phase("Precursors", "النشأة",
+      ce2ah(660), ce2ah(770), use_lang)
+    plot_phase("Early grammar", "الوضع",
+      ce2ah(770), ce2ah(920), use_lang)
+    plot_phase("Codification and\\\\\\footnotesize systematization", "التوسيع والترتيب",
+      ce2ah(920), ce2ah(1100), use_lang)
+    plot_phase("Elaboration of forms of presentation", "التبيين والتحقيق",
+      ce2ah(1100),ce2ah(1520), use_lang)
+end
 
 local M = {}
 
@@ -236,6 +253,7 @@ function M.draw(use_lang, color)
   plot_dynasties(use_lang, color)
   plot_axes(use_lang)
   plot_grammarians(use_lang)
+  plot_phases(use_lang)
 
   tex.print("\\end{tikzpicture}")
 end
