@@ -31,10 +31,8 @@
 
 \begin{document}
 \directlua{diagram = require("diagram")}
-\begin{tikzpicture}[x=\directlua{tex.print(diagram.get_pic_x())}, y=\directlua{tex.print(diagram.get_pic_y())}, yscale=-1]
 
 \directlua{diagram.draw(os.getenv("USE_LANG"))}
 
-\end{tikzpicture}
 \end{document}
 

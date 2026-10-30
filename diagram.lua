@@ -6,15 +6,13 @@ local grid_step_unit = 'cm'
 local y_grid_step_scale = 100.0
 
 
-local M = {}
-
 function get_grid_step()
   return tostring(grid_step_val) .. grid_step_unit
 end
-function M.get_pic_x()
+function get_pic_x()
   return get_grid_step()
   end
-function M.get_pic_y()
+function get_pic_y()
   return tostring(grid_step_val / y_grid_step_scale) .. grid_step_unit
 end
 
@@ -181,11 +179,19 @@ function  plot_axes(use_lang)
 
 end
 
+local M = {}
 
 function M.draw(use_lang)
-  plot_grammarians(use_lang)
-  plot_axes(use_lang)
+  tex.print(string.format("\\begin{tikzpicture}[x=%s, y=%s, yscale=-1]",
+    get_pic_x(),
+    get_pic_y()
+  ))
   plot_dynasties(use_lang)
+  plot_axes(use_lang)
+  plot_grammarians(use_lang)
+
+  tex.print("\\end{tikzpicture}")
 end
 
 return M
+
