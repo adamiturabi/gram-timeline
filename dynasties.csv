@@ -19,11 +19,12 @@ ayb,FFF9F0,north east lines,msr-0.5,hjz+0.5,1171,1250,,AYYUBIDS,الأيوبيو
 znk_1,E5F0E8,grid,shm-0.5,hjz+0.5,1154,1175,-1,ZENGIDS,الزنكيون,
 slb_1,B9C7D6,checkerboard,shm-0.3,shm-0.1,1099,1250,,,,
 slb_2,B9C7D6,checkerboard,shm-0.5,shm-0.3,1099,1187,-1,CRUSADERS,الصليبيون,xshift=5pt|rotate=90
+bwh,E6EBF1,fivepointed stars,erq-0.5,frs+0.5,945,1055,,BUYIDS,بنو بويه,xshift=10pt|yshift=5pt
 slj,F2E6D5,grid,erq-0.5,frs+0.5,1055,1194,,SELJUKS,بنو سلجوق,xshift=25pt
 ebs_4,C7D7D4,crosshatch,erq-0.5,erq+0.5,1194,1258,-1,ABBASIDS,بنو العباس,
+ebs_5,C7D7D4,crosshatch,erq-0.1,erq+0.1,945,1194,,,,
 znk_2,E5F0E8,grid,msr-0.5,msr+0.5,1167,1175,,,,
 xrz,FBEAF3,dots,frs-0.5,frs+0.5,1194,1258,-1,KHWARAZM,الخوارزميون,xshift=9pt
-bwh,E6EBF1,fivepointed stars,erq-0.5,frs+0.5,945,1055,,BUYIDS,بنو بويه,xshift=10pt|yshift=5pt
 mgl,C9D2D6,checkerboard,erq-0.5,frs+0.5,1258,1335,,MONGOLS,المغول,
 mlk,FFD6C9,horizontal lines,msr-0.5,hjz+0.5,1250,1517,1,MAMLUKS,المماليك,xshift=-32pt|yshift=32pt
 whd,E6E2F7,crosshatch dots,and,afr,1140,1269,-1,ALMOHADS,الموحدون,rotate=60
