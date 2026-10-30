@@ -93,6 +93,22 @@ function plot_grammarians(use_lang)
     tex.print(string.format("\\node (labelnode)  [inner sep=0, outer sep=0, %s of=pointnode, xshift=%.2f, yshift=%.2f,anchor=%s] {\\footnotesize %s};", v.align, v.xshift, v.yshift, v.anchor, get_name(v, use_lang)))
     tex.print(string.format("\\draw (pointnode)  -- (labelnode.%s);", v.anchor))
   end
+
+  -- migration
+  frs = regions["frs"].x
+  bsr = regions["bsr"].x
+  kwf = regions["kwf"].x
+  spn = regions["and"].x
+  shm = regions["shm"].x
+  msr = regions["msr"].x
+  hjz = regions["hjz"].x
+  afr = regions["afr"].x
+  tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,178) -- (%.2f, 180);", frs, bsr))
+  tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,664) -- (%.2f, 684);", frs, kwf))
+  tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,627) -- (%.2f, 672);", spn, shm))
+  tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,674) -- (%.2f, 745);", spn, msr))
+  tex.print(string.format("\\draw [dashed, <->, >=Latex] (%.2f,538) -- (%.2f, 538);", hjz, frs+0.5))
+  tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,650) -- (%.2f, 669);", spn+0.2, afr))
 end
 function get_font_size(size_str, use_lang)
   dict = {
