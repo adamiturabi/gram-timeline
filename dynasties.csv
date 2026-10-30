@@ -1,10 +1,10 @@
 key,pattern,reg_beg,reg_end,ce_beg,ce_end,name_size,name_en,name_ar,shifts
 nby,bricks,hjz-0.5,hjz+0.5,622,633,,,,
 rcd,bricks,afr,frs,633,663,\large,RASHIDUN,الراشدون,xshift=38pt
-umw_main,vertical lines,afr-0.5,frs+0.5,663,754,\large,UMAYYADS,بنو أمية,xshift=-20|yshift=-3pt
+umw_main,vertical lines,afr-0.5,frs+0.5,663,749,\large,UMAYYADS,بنو أمية,xshift=-20|yshift=-3pt
 umy_and,vertical lines,and-0.5,and+0.5,711,1031,,UMAYYADS,بنو أمية,rotate=90
-ebs_1,crosshatch,msr-0.5,frs+0.5,754,945,\large,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
-ebs_2,crosshatch,afr-0.5,afr+0.5,754,909,,,,
+ebs_1,crosshatch,msr-0.5,frs+0.5,750,945,\large,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
+ebs_2,crosshatch,afr-0.5,afr+0.5,750,909,,,,
 ebs_3,crosshatch,msr-0.5,hjz+0.5,945,969,,,,
 ebs_4,crosshatch,erq-0.1,erq+0.1,945,1194,,,,
 drs,dots,afr-0.5,afr,788,909,\footnotesize,IDRISIDS,الأدارسة,rotate=90
@@ -32,6 +32,6 @@ jlr,dots,erq-0.5,erq+0.5,1335,1400,\footnotesize,JALAYRIDS,الجلائر,
 zfr,dots,frs-0.5,frs+0.5,1335,1400,\footnotesize,MUZAFFARIDS,آل مظفر,xshift=5pt
 tmr,dots,erq-0.5,frs+0.5,1400,1450,,TIMURIDS,التيموريون,
 sfv_1,fivepointed stars,erq-0.5,frs+0.5,1501,1533,,,,
-sfv_2,fivepointed stars,frs-0.5,frs+0.5,1533,1000,,SAFAVIDS,الصفويون,xshift=8pt| yshift=2pt
-evm_1,north west lines,erq-0.5,erq+0.5,1533,1000,,,,
-evm_2,north west lines,afr-0.5,hjz+0.5,1517,1000,\large,OTTOMANS,العثمانيون,xshift=0pt
+sfv_2,fivepointed stars,frs-0.5,frs+0.5,1533,1591,,SAFAVIDS,الصفويون,xshift=8pt| yshift=2pt
+evm_1,north west lines,erq-0.5,erq+0.5,1533,1591,,,,
+evm_2,north west lines,afr-0.5,hjz+0.5,1517,1591,\large,OTTOMANS,العثمانيون,xshift=0pt
