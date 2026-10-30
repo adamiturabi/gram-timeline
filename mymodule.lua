@@ -109,7 +109,7 @@ function M.plot_dynasties(use_lang)
     if v.shifts ~= nil then
       shifts = v.shifts:gsub("%|", ",")
     end
-    name = get_name(v, use_lang)
+    name = v.name_size .. " " .. get_name(v, use_lang)
     tex.print("\\begin{pgfonlayer}{background}")
     tex.print(string.format("\\fill [pattern=%s,pattern color=black!10!white]", v.pattern))
     tex.print(string.format("(%.2f,%.2f) rectangle (%.2f,%.2f);", reg_beg, ce2ah(v.ce_beg), reg_end, ce2ah(v.ce_end)))
