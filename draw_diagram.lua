@@ -1,15 +1,18 @@
-local M = {}
 
 local csvutils = require("csvutils")
 
 local grid_step_val = 1.5
 local grid_step_unit = 'cm'
 local y_grid_step_scale = 100.0
-function M.get_grid_step()
+
+
+local M = {}
+
+function get_grid_step()
   return tostring(grid_step_val) .. grid_step_unit
 end
 function M.get_pic_x()
-  return M.get_grid_step()
+  return get_grid_step()
   end
 function M.get_pic_y()
   return tostring(grid_step_val / y_grid_step_scale) .. grid_step_unit
@@ -33,17 +36,17 @@ end
 function ah2ce(ah)
   return ah * (29.5 * 12) / 365.25 + 622 - 1
 end
-function M.get_beg_ah()
+function get_beg_ah()
   return 0
 end
-function M.get_end_ah()
+function get_end_ah()
   return 1000
 end
-function M.get_beg_reg_val()
+function get_beg_reg_val()
   return 0
 end
-function M.get_end_reg_val()
-  max_reg_val = M.get_beg_reg_val()
+function get_end_reg_val()
+  max_reg_val = get_beg_reg_val()
   for k, v in pairs(regions) do
     if v.x > max_reg_val then
       max_reg_val = v.x
@@ -78,7 +81,7 @@ function get_region_parts(region_code)
   return base_region, add_val
 end
  
-function M.plot_grammarians(use_lang)
+function plot_grammarians(use_lang)
   local grammarians, gram_order = csvutils.parseCommentHeaderCSV("grammarians.csv")
  
   for k, v in pairs(grammarians) do
@@ -94,7 +97,7 @@ function M.plot_grammarians(use_lang)
   end
 end
 
-function M.plot_dynasties(use_lang)
+function plot_dynasties(use_lang)
   local dynasties, dyn_order = csvutils.parseCommentHeaderCSV("dynasties.csv")
  
   for index, k in ipairs(dyn_order) do
@@ -121,34 +124,34 @@ function M.plot_dynasties(use_lang)
 end
 
 
-function  M.plot_axes(use_lang)
+function  plot_axes(use_lang)
   tex.print(string.format("\\draw [help lines, xstep=%s, ystep=%s] (%.2f, %.2f) grid (%.2f, %.2f + 1);",
-    M.get_grid_step(),
-    M.get_grid_step(),
-    M.get_beg_reg_val(),
-    M.get_beg_ah(),
-    M.get_end_reg_val(),
-    M.get_end_ah()
+    get_grid_step(),
+    get_grid_step(),
+    get_beg_reg_val(),
+    get_beg_ah(),
+    get_end_reg_val(),
+    get_end_ah()
   ))
 
   -- Axis
   tex.print(string.format("\\draw [] (%.2f, 0) -- (%.2f, 0);",
-    M.get_beg_reg_val(),
-    M.get_end_reg_val()
+    get_beg_reg_val(),
+    get_end_reg_val()
   ))
 
   -- Axis ticks
-  for y = y_grid_step_scale, M.get_end_ah(), y_grid_step_scale do
+  for y = y_grid_step_scale, get_end_ah(), y_grid_step_scale do
     tex.print(string.format("\\draw (0, %.2f) -- (-.2, %.2f) node [anchor=east] {\\footnotesize %d};",
       y, y, y))
   end
   -- 1AH
   tex.print(string.format("\\draw (0, 0) -- (-.2, 0) node [anchor=east] {\\footnotesize 1};"))
-  tex.print(string.format("\\node  at (%.2f-0.5,50) {\\footnotesize \\textsc{ah}};", M.get_beg_reg_val()))
-  tex.print(string.format("\\node  at (%.2f+0.5,30) {\\footnotesize \\textsc{ce}};", M.get_end_reg_val()))
+  tex.print(string.format("\\node  at (%.2f-0.5,50) {\\footnotesize \\textsc{ah}};", get_beg_reg_val()))
+  tex.print(string.format("\\node  at (%.2f+0.5,30) {\\footnotesize \\textsc{ce}};", get_end_reg_val()))
 
-  beg_ce = math.floor(ah2ce(M.get_beg_ah())/100) * 100
-  end_ce = math.ceil(ah2ce(M.get_end_ah())/100) * 100
+  beg_ce = math.floor(ah2ce(get_beg_ah())/100) * 100
+  end_ce = math.ceil(ah2ce(get_end_ah())/100) * 100
   for y = beg_ce, end_ce, y_grid_step_scale do
     tex.print(string.format("\\draw (7, %.2f) -- (7.2, %.2f) node [anchor=west] {\\footnotesize %d};",
     ce2ah(y), ce2ah(y), y))
@@ -176,6 +179,13 @@ function  M.plot_axes(use_lang)
     baghdad.x, "←" .. get_name(baghdad, use_lang)
   ))
 
+end
+
+
+function M.draw_diagram(use_lang)
+  plot_grammarians(use_lang)
+  plot_axes(use_lang)
+  plot_dynasties(use_lang)
 end
 
 return M
