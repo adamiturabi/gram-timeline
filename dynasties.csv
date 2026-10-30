@@ -8,9 +8,9 @@ ebs_2,crosshatch,afr-0.5,afr+0.5,750,909,,,,
 ebs_3,crosshatch,msr-0.5,hjz+0.5,945,969,,,,
 ebs_4,crosshatch,erq-0.1,erq+0.1,945,1194,,,,
 drs,dots,afr-0.5,afr,788,909,\footnotesize,IDRISIDS,الأدارسة,rotate=90
-glb,dots,afr,afr+0.5,800,909,\footnotesize,AGHLABIDS,الأغالبة,rotate=90
+glb,dots,afr,afr+0.5,800,909,\footnotesize,AGHLABIDS,بنو الأغلب,rotate=90
 tln,dots,msr,shm,872,904,\footnotesize,TULUNIDS,بنو طولون,
-xcd,dots,msr,shm,934,969,\footnotesize,IKHSHIDIDS,الإخشيديون,
+xcd,dots,msr,shm,934,969,\footnotesize,IKHSHIDIDS,بنو الإخشيد,
 sfr,dots,frs-0.5,frs+0.5,870,912,\footnotesize,SAFFARIDS,بنو الصفار,
 ftm_1,sixpointed stars,shm-0.5,hjz+0.5,969,1154,,,الفاطميون,
 ftm_2,sixpointed stars,msr-0.5,msr+0.5,969,1167,\large,FATIMIDS,,xshift=10pt
@@ -34,4 +34,4 @@ tmr,dots,erq-0.5,frs+0.5,1400,1450,,TIMURIDS,التيموريون,
 sfv_1,fivepointed stars,erq-0.5,frs+0.5,1501,1533,,,,
 sfv_2,fivepointed stars,frs-0.5,frs+0.5,1533,1591,,SAFAVIDS,الصفويون,xshift=8pt| yshift=2pt
 evm_1,north west lines,erq-0.5,erq+0.5,1533,1591,,,,
-evm_2,north west lines,afr-0.5,hjz+0.5,1517,1591,\large,OTTOMANS,العثمانيون,xshift=0pt
+evm_2,north west lines,afr-0.5,hjz+0.5,1517,1591,\large,OTTOMANS,بنو عثمان,xshift=0pt
