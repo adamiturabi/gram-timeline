@@ -182,7 +182,7 @@ function  plot_axes(use_lang)
 end
 
 
-function M.draw_diagram(use_lang)
+function M.draw(use_lang)
   plot_grammarians(use_lang)
   plot_axes(use_lang)
   plot_dynasties(use_lang)
