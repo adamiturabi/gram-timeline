@@ -1,6 +1,4 @@
-# gram-timeline
-
-Tikz chart of timeline of Arabic grammarians.
+# Tikz chart of timeline of Arabic grammarians.
 
 Inspired by and built upon Andreas Hallberg's work: <https://andreasmhallberg.github.io/timeline-of-arab-grammarians/>
 
@@ -9,7 +7,7 @@ Inspired by and built upon Andreas Hallberg's work: <https://andreasmhallberg.gi
 ### Required utilities
 
 + lualatex
-+ pdftocairo
++ pdftocairo (`brew install poppler`)
 
 ### Required fonts
 
