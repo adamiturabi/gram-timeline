@@ -94,13 +94,34 @@ function plot_grammarians(use_lang)
     tex.print(string.format("\\draw (pointnode)  -- (labelnode.%s);", v.anchor))
   end
 end
-
+function get_font_size(size_str, use_lang)
+  dict = {
+    [-4]  = "\\tiny",
+    [-3]  = "\\scriptsize",
+    [-2]  = "\\footnotesize",
+    [-1]  = "\\small",
+    [0]   = "\\normalsize",
+    [1]   = "\\large",
+    [2]   = "\\Large",
+    [3]   = "\\LARGE",
+    [4]   = "\\huge",
+    [5]   = "\\Huge"
+  }
+  if size_str == nil or size_str == "" then
+    size_str = 0
+  end
+  local size_int = tonumber(size_str)
+  -- bump up Arabic font size
+  if use_lang == 'ar' then
+    size_int = size_int + 1
+  end
+  return dict[size_int]
+end
 function plot_dynasties(use_lang)
   local dynasties, dyn_order = csvutils.parseCommentHeaderCSV("dynasties.csv")
  
   for index, k in ipairs(dyn_order) do
     v = dynasties[k]
-  --for k, v in pairs(dynasties) do
     local reg_beg, add_val = get_region_parts(v.reg_beg)
     reg_beg = regions[reg_beg].x + add_val
     local reg_end, add_val = get_region_parts(v.reg_end)
@@ -111,7 +132,7 @@ function plot_dynasties(use_lang)
     if v.shifts ~= nil then
       shifts = v.shifts:gsub("%|", ",")
     end
-    name = v.name_size .. " " .. get_name(v, use_lang)
+    name = get_font_size(v.name_size, use_lang) .. " " .. get_name(v, use_lang)
     tex.print("\\begin{pgfonlayer}{background}")
     tex.print(string.format("\\fill [pattern=%s,pattern color=black!10!white]", v.pattern))
     tex.print(string.format("(%.2f,%.2f) rectangle (%.2f,%.2f);", reg_beg, ce2ah(v.ce_beg), reg_end, ce2ah(v.ce_end)))

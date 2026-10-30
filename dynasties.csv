@@ -1,37 +1,37 @@
 key,pattern,reg_beg,reg_end,ce_beg,ce_end,name_size,name_en,name_ar,shifts
 nby,bricks,hjz-0.5,hjz+0.5,622,633,,,,
-rcd,bricks,afr,frs,633,663,\large,RASHIDUN,الراشدون,xshift=30pt|yshift=5pt
-umw_main,vertical lines,afr-0.5,frs+0.5,663,749,\large,UMAYYADS,بنو أمية,xshift=-20|yshift=-3pt
+rcd,bricks,afr,frs,633,663,1,RASHIDUN,الراشدون,xshift=30pt|yshift=5pt
+umw_main,vertical lines,afr-0.5,frs+0.5,663,749,1,UMAYYADS,بنو أمية,xshift=-20|yshift=-3pt
 umy_and,vertical lines,and-0.5,and+0.5,711,1031,,UMAYYADS,بنو أمية,rotate=90
-ebs_1,crosshatch,msr-0.5,frs+0.5,750,945,\large,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
+ebs_1,crosshatch,msr-0.5,frs+0.5,750,945,1,ABBASIDS,بنو العباس,xshift=30pt|yshift=-9pt
 ebs_2,crosshatch,afr-0.5,afr+0.5,750,909,,,,
 ebs_3,crosshatch,msr-0.5,hjz+0.5,945,969,,,,
 ebs_4,crosshatch,erq-0.1,erq+0.1,945,1194,,,,
-drs,dots,afr-0.5,afr,788,909,\footnotesize,IDRISIDS,الأدارسة,rotate=90
-glb,dots,afr,afr+0.5,800,909,\footnotesize,AGHLABIDS,بنو الأغلب,rotate=90
-tln,dots,msr,shm,872,904,\footnotesize,TULUNIDS,بنو طولون,
-xcd,dots,msr,shm,934,969,\footnotesize,IKHSHIDIDS,بنو الإخشيد,
-sfr,dots,frs-0.5,frs+0.5,870,912,\footnotesize,SAFFARIDS,بنو الصفار,
+drs,dots,afr-0.5,afr,788,909,-2,IDRISIDS,الأدارسة,rotate=90
+glb,dots,afr,afr+0.5,800,909,-2,AGHLABIDS,بنو الأغلب,rotate=90
+tln,dots,msr,shm,872,904,-2,TULUNIDS,بنو طولون,
+xcd,dots,msr,shm,934,969,-2,IKHSHIDIDS,بنو الإخشيد,
+sfr,dots,frs-0.5,frs+0.5,870,912,-2,SAFFARIDS,بنو الصفار,
 ftm_1,sixpointed stars,shm-0.5,hjz+0.5,969,1154,,,الفاطميون,
-ftm_2,sixpointed stars,msr-0.5,msr+0.5,969,1167,\large,FATIMIDS,,xshift=10pt
+ftm_2,sixpointed stars,msr-0.5,msr+0.5,969,1167,1,FATIMIDS,,xshift=10pt
 ftm_3,sixpointed stars,afr-0.5,afr+0.5,909,1050,,,,
 slb_1,checkerboard,shm-0.3,shm-0.1,1099,1250,,,,
-slb_2,checkerboard,shm-0.5,shm-0.3,1099,1187,\small,CRUSADERS,الصليبيون,xshift=5pt|rotate=90
+slb_2,checkerboard,shm-0.5,shm-0.3,1099,1187,-1,CRUSADERS,الصليبيون,xshift=5pt|rotate=90
 ayb,north east lines,msr-0.5,hjz+0.5,1171,1250,,AYYUBIDS,الأيوبيون,
 slj,grid,erq-0.5,frs+0.5,1055,1194,,SELJUKS,بنو سلجوق,xshift=25pt
-ebs_4,crosshatch,erq-0.5,erq+0.5,1194,1258,\small,ABBASIDS,بنو العباس,
-znk_1,grid,shm-0.5,hjz+0.5,1154,1175,\small,ZENGIDS,الزنكيون,
+ebs_4,crosshatch,erq-0.5,erq+0.5,1194,1258,-1,ABBASIDS,بنو العباس,
+znk_1,grid,shm-0.5,hjz+0.5,1154,1175,-1,ZENGIDS,الزنكيون,
 znk_2,grid,msr-0.5,msr+0.5,1167,1175,,,,
-xrz,dots,frs-0.5,frs+0.5,1194,1258,\small,KHWARAZM,الخوارزميون,xshift=9pt
+xrz,dots,frs-0.5,frs+0.5,1194,1258,-1,KHWARAZM,الخوارزميون,xshift=9pt
 bwh,fivepointed stars,erq-0.5,frs+0.5,945,1055,,BUYIDS,بنو بويه,xshift=10pt|yshift=5pt
 mgl,checkerboard,erq-0.5,frs+0.5,1258,1335,,MONGOLS,المغول,
-mlk,horizontal lines,msr-0.5,hjz+0.5,1250,1517,\large,MAMLUKS,المماليك,xshift=-32pt|yshift=32pt
-rbt,crosshatch dots,and,afr,1056,1140,\small,ALMORAVIDS,المرابطون,rotate=60
-whd,crosshatch dots,and,afr,1140,1269,\small,ALMOHADS,الموحدون,rotate=60
-jlr,dots,erq-0.5,erq+0.5,1335,1400,\footnotesize,JALAYRIDS,الجلائر,
-zfr,dots,frs-0.5,frs+0.5,1335,1400,\footnotesize,MUZAFFARIDS,آل مظفر,xshift=5pt
+mlk,horizontal lines,msr-0.5,hjz+0.5,1250,1517,1,MAMLUKS,المماليك,xshift=-32pt|yshift=32pt
+rbt,crosshatch dots,and,afr,1056,1140,-1,ALMORAVIDS,المرابطون,rotate=60
+whd,crosshatch dots,and,afr,1140,1269,-1,ALMOHADS,الموحدون,rotate=60
+jlr,dots,erq-0.5,erq+0.5,1335,1400,-2,JALAYRIDS,الجلائر,
+zfr,dots,frs-0.5,frs+0.5,1335,1400,-2,MUZAFFARIDS,آل مظفر,xshift=5pt
 tmr,dots,erq-0.5,frs+0.5,1400,1450,,TIMURIDS,التيموريون,
 sfv_1,fivepointed stars,erq-0.5,frs+0.5,1501,1533,,,,
 sfv_2,fivepointed stars,frs-0.5,frs+0.5,1533,1591,,SAFAVIDS,الصفويون,xshift=8pt| yshift=2pt
 evm_1,north west lines,erq-0.5,erq+0.5,1533,1591,,,,
-evm_2,north west lines,afr-0.5,hjz+0.5,1517,1591,\large,OTTOMANS,بنو عثمان,xshift=0pt
+evm_2,north west lines,afr-0.5,hjz+0.5,1517,1591,1,OTTOMANS,بنو عثمان,xshift=0pt
