@@ -233,10 +233,10 @@ function  plot_axes(use_lang)
     end
   end
 
-  tex.print(string.format("\\node[rotate=90, align=left, anchor=west] () at (%.2f-0.05, -15) {\\scriptsize %s};",
+  tex.print(string.format("\\node[rotate=90, align=left, anchor=west] () at (%.2f-0.05, -15) {\\footnotesize %s};",
     regions["kwf"].x, "←" .. get_name(regions["kwf"], use_lang)
   ))
-  tex.print(string.format("\\node[rotate=90, align=left, anchor=west] () at (%.2f+0.05, -15) {\\scriptsize %s};",
+  tex.print(string.format("\\node[rotate=90, align=left, anchor=west] () at (%.2f+0.05, -15) {\\footnotesize %s};",
     regions["bsr"].x, "←" .. get_name(regions["bsr"], use_lang)
   ))
   baghdad = {
@@ -244,7 +244,7 @@ function  plot_axes(use_lang)
     name_en = "Bag͡hdād",
     name_ar = "بغداد"
   }
-  tex.print(string.format("\\node[rotate=90, align=left, anchor=west] () at (%.2f, -15) {\\scriptsize %s};",
+  tex.print(string.format("\\node[rotate=90, align=left, anchor=west] () at (%.2f, -15) {\\footnotesize %s};",
     baghdad.x, "←" .. get_name(baghdad, use_lang)
   ))
 
