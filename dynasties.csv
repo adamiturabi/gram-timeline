@@ -15,7 +15,7 @@ sfr,0,dots,frs-0.5,frs+0.5,870,912,-2,SAFFARIDS,بنو الصفار,
 ftm_1,D6E7F7,sixpointed stars,shm-0.5,hjz+0.5,969,1154,,,الفاطميون,
 ftm_2,D6E7F7,sixpointed stars,msr-0.5,msr+0.5,969,1167,1,FATIMIDS,,xshift=10pt
 ftm_3,D6E7F7,sixpointed stars,afr-0.5,afr+0.5,909,1050,,,,
-ayb,FFF9F0,north east lines,msr-0.5,hjz+0.5,1171,1250,,AYYUBIDS,الأيوبيون,xshift=20pt
+ayb,E7D3A2,north east lines,msr-0.5,hjz+0.5,1171,1250,,AYYUBIDS,الأيوبيون,xshift=20pt
 znk_1,F2E6D5,grid,shm-0.5,hjz+0.5,1154,1175,-1,ZENGIDS,الزنكيون,
 znk_2,F2E6D5,grid,msr-0.5,msr+0.5,1167,1175,,,,
 slb_1,B9C7D6,checkerboard,shm-0.3,shm-0.1,1099,1250,,,,
@@ -29,13 +29,13 @@ mgl,C9D2D6,checkerboard,erq-0.5,frs+0.5,1258,1335,,MONGOLS,المغول,
 mlk,FFD6C9,horizontal lines,msr-0.5,hjz+0.5,1250,1517,1,MAMLUKS,المماليك,xshift=-32pt|yshift=32pt
 whd,E6E2F7,crosshatch dots,and-0.25,afr,1140,1269,-1,ALMOHADS,الموحدون,rotate=60
 rbt,BE9FBF,crosshatch dots,and-0.25,afr,1056,1140,-1,ALMORAVIDS,المرابطون,rotate=60
-mrn,aaa7cc,crosshatch dots,afr-0.5,afr+0.5,1217,1465,,MARINIDS,بنو مرين,rotate=90|xshift=-15pt
-nsr,BFD4FF,crosshatch dots,and,and+0.5,1269,1492,-1,NASRIDS,بنو نصر,rotate=90
+mrn,AAA7CC,crosshatch dots,afr-0.5,afr+0.5,1217,1465,,MARINIDS,بنو مرين,rotate=90|xshift=-15pt
+nsr,BFB5B2,crosshatch dots,and,and+0.5,1269,1492,-1,NASRIDS,بنو نصر,rotate=90
 jlr,F2E9E4,dots,erq-0.5,erq+0.5,1335,1400,-2,JALAYRIDS,الجلائر,
 zfr,F2E9E4,dots,frs-0.5,frs+0.5,1335,1400,-2,MUZAFFARIDS,آل مظفر,xshift=5pt
 tmr,F2E9E4,dots,erq-0.5,frs+0.5,1400,1450,,TIMURIDS,التيموريون,
 aqo,F2E9E4,dots,erq-0.5,frs+0.5,1450,1501,-2,AQ QOYUNLU,آق قويونلو,
-sfv_1,FBE7B8,fivepointed stars,erq-0.5,frs+0.5,1501,1533,,,,
-sfv_2,FBE7B8,fivepointed stars,frs-0.5,frs+0.5,1533,1591,,SAFAVIDS,الصفويون,xshift=8pt| yshift=2pt
-evm_1,E7D3A2,north west lines,erq-0.5,erq+0.5,1533,1591,,,,
-evm_2,E7D3A2,north west lines,afr-0.5,hjz+0.5,1517,1591,1,OTTOMANS,بنو عثمان,xshift=0pt
+sfv_1,BFD4FF,fivepointed stars,erq-0.5,frs+0.5,1501,1533,,,,
+sfv_2,BFD4FF,fivepointed stars,frs-0.5,frs+0.5,1533,1591,,SAFAVIDS,الصفويون,xshift=8pt| yshift=2pt
+evm_1,FBE7B8,north west lines,erq-0.5,erq+0.5,1533,1591,,,,
+evm_2,FBE7B8,north west lines,afr-0.5,hjz+0.5,1517,1591,1,OTTOMANS,بنو عثمان,xshift=0pt
