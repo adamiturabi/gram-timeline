@@ -54,12 +54,25 @@ function get_end_reg_val()
 end
 
 function get_name(v, use_lang)
+  local name
   if use_lang == 'ar' then
-    return '\\foreignlanguage{arabic}{' .. v.name_ar .. '}'
+    name =  '\\foreignlanguage{arabic}{' .. v.name_ar
+    if v.school ~= nil and v.school ~= "" then
+      if v.school == 'b'then
+        name = name .. ' (ب)'
+      else
+        name = name .. ' (ك)'
+      end
+    end
+    name = name .. '}'
   else
     assert(use_lang == 'en')
-    return v.name_en
+    name = v.name_en
+    if v.school ~= nil and v.school ~= "" then
+      name = name .. ' \\textsc{(' .. v.school .. ')}'
+    end
   end
+  return name
 end
 
 function get_region_parts(region_code)
@@ -167,7 +180,7 @@ function plot_dynasties(use_lang, color)
     end
     name = get_font_size(v.name_size, use_lang) .. " " .. get_name(v, use_lang)
     tex.print("\\begin{pgfonlayer}{background}")
-    if color == true then
+    if color then
       tex.print(string.format("\\fill [fill={rgb,255:red,%d;green,%d;blue,%d}, fill opacity=%.2f]", get_rgb(v.color)))
     else
       tex.print(string.format("\\fill [pattern=%s,pattern color=black!10!white]", v.pattern))
