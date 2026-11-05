@@ -28,10 +28,10 @@ xrz,FBEAF3,dots,frs-0.5,frs+0.5,1194,1220,-1,KHWARAZM,الخوارزميون,xsh
 mgl_1,8D9DAF,checkerboard,frs-0.5,frs+0.5,1220,1335,,,,
 mgl_2,8D9DAF,checkerboard,erq-0.5,erq+0.5,1258,1335,,MONGOLS,المغول,xshift=25pt
 mlk,FFD6C9,horizontal lines,msr-0.5,hjz+0.5,1250,1517,1,MAMLUKS,المماليك,xshift=-32pt|yshift=32pt
-whd,E6E2F7,crosshatch dots,and-0.25,afr,1140,1269,-1,ALMOHADS,الموحدون,
+whd,E6E2F7,crosshatch dots,and-0.25,afr,1140,1269,-1,ALMOHADS,الموحدون,yshift=12pt
 rbt,BE9FBF,crosshatch dots,and-0.25,afr,1056,1140,-1,ALMORAVIDS,المرابطون,
-mrn,AAA7CC,crosshatch dots,afr-0.5,afr,1217,1465,,MARINIDS,بنو مرين,rotate=90|xshift=-15pt
-hfs,D7DDD3,crosshatch dots,afr,afr+0.5,1229,1574,,HAFSIDS,بنو حفص,rotate=90|xshift=-15pt
+mrn,AAA7CC,crosshatch dots,afr-0.5,afr+0.2,1217,1465,,MARINIDS,بنو مرين,rotate=90|xshift=-15pt
+hfs,E6D6D5,crosshatch dots,afr+0.2,afr+0.5,1229,1574,,HAFSIDS,بنو حفص,rotate=90|xshift=-15pt
 nsr,BFB5B2,crosshatch dots,and,and+0.5,1269,1492,-1,NASRIDS,بنو نصر,rotate=90
 jlr,F2E9E4,dots,erq-0.5,erq+0.5,1335,1400,-2,JALAYRIDS,الجلائر,
 zfr,F2E9E4,dots,frs-0.5,frs+0.5,1335,1400,-2,MUZAFFARIDS,آل مظفر,xshift=5pt
@@ -40,5 +40,7 @@ aqo,F2E9E4,dots,erq-0.5,frs+0.5,1450,1501,-2,AQ QOYUNLU,آق قويونلو,
 sfv_1,BFD4FF,fivepointed stars,erq-0.5,frs+0.5,1501,1533,,,,
 sfv_2,BFD4FF,fivepointed stars,frs-0.5,frs+0.5,1533,1591,,SAFAVIDS,الصفويون,xshift=8pt| yshift=2pt
 evm_1,FBE7B8,north west lines,erq-0.5,erq+0.5,1533,1591,,,,
-evm_2,FBE7B8,north west lines,afr,hjz+0.5,1517,1591,1,OTTOMANS,بنو عثمان,xshift=0pt
+evm_2,FBE7B8,north west lines,afr+0.5,hjz+0.5,1517,1591,1,OTTOMANS,بنو عثمان,xshift=0pt
+evm_3,FBE7B8,north west lines,afr+0.2,afr+0.5,1574,1591,,,,
+evm_4,FBE7B8,north west lines,afr,afr+0.2,1550,1591,,,,
 crf,CFAFAE,crosshatch dots,afr-0.5,afr,1510,1591,-1,SHARIFS,الأشراف,rotate=90|xshift=0pt
