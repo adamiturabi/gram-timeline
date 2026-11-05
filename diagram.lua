@@ -121,7 +121,7 @@ function plot_grammarians(use_lang)
   tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,627) -- (%.2f, 672);", spn, shm))
   tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,674) -- (%.2f, 745);", spn, msr))
   tex.print(string.format("\\draw [dashed, <->, >=Latex] (%.2f,538) -- (%.2f, 538);", hjz, frs+0.5))
-  tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,650) -- (%.2f, 669);", spn+0.2, afr))
+  tex.print(string.format("\\draw [dashed, ->, -{Latex}] (%.2f,650) -- (%.2f, 669);", spn+0.2, afr+0.4))
 end
 function get_font_size(size_str, use_lang)
   dict = {
