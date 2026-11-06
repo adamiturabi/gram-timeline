@@ -19,10 +19,10 @@ end
 
 local regions = {
   ["and"] = { x = 0.5, name_en = "Spain"       , name_ar = "الأندلس" }, -- Andalus
-  ["afr"] = { x = 1.5, name_en = "North Africa", name_ar = "إفريقية" },-- North Africa
+  ["afr"] = { x = 1.5, name_en = "North Africa", name_ar = "المغرب" },-- North Africa
   ["msr"] = { x = 2.5, name_en = "Egypt"       , name_ar = "مصر" },    -- Egypt
   ["shm"] = { x = 3.5, name_en = "Syria"       , name_ar = "الشام" },  -- the Levant
-  ["hjz"] = { x = 4.5, name_en = "Arabia"      , name_ar = "الحجاز" }, -- Arabia
+  ["hjz"] = { x = 4.5, name_en = "Arabia"      , name_ar = "جزيرة العرب" }, -- Arabia
   ["erq"] = { x = 5.5, name_en = "Iraq"        , name_ar = "العراق" }, -- Iraq/Baghdad
   ["frs"] = { x = 6.5, name_en = "Persia"      , name_ar = "الفارس" }, -- Persia
   ["bsr"] = { x = 5.75,name_en = "al-Baṣrah"   , name_ar = "البصرة" }, -- Basrah
